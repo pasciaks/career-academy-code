@@ -35,3 +35,52 @@ console.log(fruits1, "not", fruits2)
 // Note that the spread operator only performs a shallow copy of the source array or object. For more information on this, please refer to the additional reading.
 
 // There are many more tricks that you can perform with the spread operator. Some of them are really handy when you start working with a library such as React.
+
+const meal = ["soup", "steak", "ice cream"]
+let [starter] = meal;
+console.log(starter);
+
+
+
+// object is not iterable so for OF loop will not work
+// let obj = {
+//   test: 1,
+//   other: 2
+// }
+
+// for (prop of obj) {
+//   console.log(prop);
+// }
+
+let food = "Chocolate";
+console.log(`My favourite food is ${food}`);
+
+let set = new Set();
+set.add(1);
+set.add(2);
+set.add(3);
+set.add(2);
+set.add(1);
+console.log(set);
+
+
+
+let obj = {
+  key: 1,
+  value: 4
+};
+
+let output = { ...obj };
+output.value -= obj.key;
+
+console.log(output.value);
+
+
+
+
+function count(...basket) {
+  console.log(basket.length)
+}
+
+count(10, 9, 8, 7, 6);
+
