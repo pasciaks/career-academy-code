@@ -34,3 +34,17 @@ Correct! The rest operator can be used to destructure existing array items, rath
 
 
 */
+
+function addTaxToPrices(taxRate, ...itemsBought) {
+  return itemsBought.map(item => item * (1 + taxRate));
+}
+
+let shoppingCart = addTaxToPrices(0.07, 12.00, 15.00, 20.00);
+console.log(shoppingCart);
+
+let totalPaid = shoppingCart.reduce((prev, current) => prev + current);
+console.log(totalPaid);
+
+let a = .84 + .05 + .40;
+console.log(a);
+
