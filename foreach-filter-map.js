@@ -10,15 +10,26 @@ veggies.forEach(function (veggie, index) {
 });
 
 const nums = [0, 10, 20, 30, 40, 50];
-let result = nums.filter(function (num) {
+let result3 = nums.filter(function (num) {
   return num > 20;
 })
 
-console.log(result);
+console.log(result3);
 
 let resultOfMap = [0, 10, 20, 30, 40, 50].map(function (num) {
   return num / 10
 })
 
 console.log(resultOfMap);
+
+const result2 = [];
+const drone = {
+  speed: 100,
+  color: 'yellow'
+}
+const droneKeys = Object.keys(drone);
+droneKeys.forEach(function (key) {
+  result2.push(key, drone[key])
+})
+console.log(result2)
 
